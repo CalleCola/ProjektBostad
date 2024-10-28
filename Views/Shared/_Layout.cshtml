@@ -1,0 +1,74 @@
+﻿@using Microsoft.AspNetCore.Http
+@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    @RenderSection("Metatags", required: false)
+    
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"] - ProjektBostad</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ProjektBostad.styles.css" asp-append-version="true" />
+    <style>
+        .custom-navbar {
+            background: linear-gradient(to right, #ffff, blue); /* Define your gradient colors */
+            
+        }
+    </style>
+</head>
+<body>
+    @{
+        var hideNavbar2 = (ViewContext.RouteData.Values["Controller"].ToString() == "Hemnet" && ViewContext.RouteData.Values["Action"].ToString() == "SkapaAnvandare");
+        var hideNavbar = (ViewContext.RouteData.Values["Controller"].ToString() == "Hemnet" && ViewContext.RouteData.Values["Action"].ToString() == "LogIn");
+        var hideNavbar3 = (ViewContext.RouteData.Values["Controller"].ToString() == "Hemnet" && ViewContext.RouteData.Values["Action"].ToString() == "KontoResultat");
+    }
+  
+
+
+    <header>
+        @if (!hideNavbar && !hideNavbar2 && !hideNavbar3){
+            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light custom-navbar border-bottom box-shadow mb-3">
+                
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">ProjektBostad</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Hemnet" asp-action="BostadControll">Lediga Bostäder</a>
+                        </li>                     
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Hemnet" asp-action="TaBortAnvandare">Mitt Konto</a>
+                        </li>
+                            <ul class="navbar-nav flex-grow-1 justify-content-end">
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-controller="Hemnet" asp-action="TaBortAnvandare">Inloggad: @HttpContextAccessor.HttpContext.Session.GetString("UserName")</a>
+                                </li>
+                           </ul>                          
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        }
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+   
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,80 @@
+﻿@model  ProjektBostad.Models.Anvandare
+
+
+<style>
+
+    body {
+        background-image: url('/Bilder/cool.jpg');
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    
+
+    .login-container {
+        background-color: white;
+        text-align: center;
+        max-width: 400px;
+        width: 100%;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        margin-left: 365px;
+    }
+
+        .login-container input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .login-container button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+            .login-container button:hover {
+                background-color: #0056b3;
+            }
+</style>
+
+
+
+<div class="login-container">
+    <form asp-action="LogIn" asp-controller="Hemnet" class="login-form" method="post">
+        <div>
+            <label asp-for="Anv_Namn">Användarnamn</label>
+            <input asp-for="Anv_Namn" class="form-control" placeholder="Användarnamn" required>
+        </div>
+        <div>
+            <label asp-for="Losenord">Lösenord</label>
+            <input asp-for="Losenord" class="form-control" type="password" placeholder="Lösenord" required>
+        </div>
+        <div>
+            <button type="submit" >Logga in</button>
+        </div>
+    </form>
+
+    <div id="felmeddelande" style="color: blue;">
+        @if (!string.IsNullOrEmpty(ViewBag.Felmeddelande))
+        {
+            @ViewBag.Felmeddelande
+        }
+    </div>
+    <div>
+        <a href="@Url.Action("SkapaAnvandare", "Hemnet")">Skapa konto</a>
+    </div>
+   
+</div>
+
+    
+
+ 

@@ -1,0 +1,110 @@
+﻿@model IEnumerable<ProjektBostad.Models.BostadsDetalj>
+
+
+<style> 
+
+
+    h1{
+        color: white;
+        font-family: Rage;
+        text-align:center;
+       align-items: center;
+    }
+    body{
+        background-color: darkslateblue;
+    }
+
+    .full-height{
+        height: 100vh;
+        width:contain;
+    }
+
+    .container{
+        width:contain;
+
+    }
+    
+    .h1{
+        text-align: center;
+        font-family: Algerian;
+
+
+    }
+    .card {
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        padding: 10px;
+        transition: transform 0.2s;
+        background-size: contain;
+        background-repeat: no-repeat;
+      
+    }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+    .card-title {
+        font-size: 1.25rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+    }
+
+    .card-text {
+        font-size: 0.9rem;
+        color: black;
+        
+        border: 10px;
+        border-color: black;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+    }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+
+
+</style>
+<div class="container full-height">
+    <h1>Bostäder till salu</h1>
+
+    @if (Model != null)
+    {
+        
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-4 mb-4">
+                    <div class="card" style="background-image: url('@item.Bild');">
+                        <div class="card-body">
+                            <h5 class="card-title">@item.Bostadsnamn</h5>
+                            <p class="card-text">@item.Adress, @item.Postkod @item.Stad </p>
+                            <p class="card-text">Kostnad: @item.Kostnad kr</p>         
+                            <p class="card-text">Kvm: @item.Kvm</p>                           
+                            <a asp-action="KopSida" asp-route-id="@item.Anlagg_Id" class="btn btn-primary" target="_blank">Köp nu</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <p>Finns ingen data</p>
+    }
+
+    @if (ViewBag.antal != "")
+    {
+        
+        <p>ViewBag.antal innehåller: @ViewBag.antal</p>
+    }
+    @if (ViewBag.error != "")
+    {
+        <p>ViewBag.antal innehåller: @ViewBag.error</p>
+    }
+</div>

@@ -1,0 +1,122 @@
+﻿@model ProjektBostad.Models.BankModell
+
+@{
+    ViewData["Title"] = "KopFormular";
+}
+
+<style>
+
+     body{
+        background-image: url('/Bilder/bla.webp');
+        background-size: cover;
+        background-position: center;
+     }
+    .container {
+        max-width: 600px;
+        border: 1px solid #ccc;
+        padding: 20px;
+        border-radius: 8px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .form-group label {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 5px; 
+    }
+    .form-control {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-bottom: 10px; 
+    }
+    .btn-primary {
+        background-color: #007bff;
+        border: none;
+        border-radius: 4px;
+        padding: 10px 20px;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 10px; /* Add some space above the button */
+    }
+
+   .btn-primary:hover {
+            background-color: #0056b3;
+   }
+    .kontonummer-input {
+        position: relative;
+    }
+
+        .kontonummer-input input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .kontonummer-input::before {
+            content: "-";
+            position: absolute;
+            right: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 10px;
+            color: #555;
+        }
+
+
+</style>
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h2 >Betalningsinformation</h2>
+            
+            <hr />
+
+            <form asp-action="KopFormular">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="form-group">
+                    <label asp-for="Fornamn" class="control-label" required>Förnamn</label>
+                    <input asp-for="Fornamn" class="form-control" />
+                    <span asp-validation-for="Fornamn" class="text-danger">*</span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Efternamn" class="control-label" required></label>
+                    <input asp-for="Efternamn" class="form-control" />
+                    <span asp-validation-for="Efternamn" class="text-danger">*</span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Email" class="control-label" required></label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger">*</span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Kontonummer" class="control-label" required></label>
+                    <div class="kontonummer-input">
+                        <input asp-for="Kontonummer" class="form-control" />
+                    </div>
+                    <span asp-validation-for="Kontonummer" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Fakturering" class="control-label" required >Faktureringsadress</label>
+                    <input asp-for="Fakturering" class="form-control" />
+                    <span asp-validation-for="Fakturering" class="text-danger">*</span>
+                </div>
+
+                <div class="form-group text-center">
+                    <input type="submit" value="Bekräfta Köp" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

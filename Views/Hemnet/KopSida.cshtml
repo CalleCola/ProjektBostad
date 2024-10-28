@@ -1,0 +1,158 @@
+﻿
+@model ProjektBostad.Models.BostadsDetalj
+<meta name="keywords" content="Bostad, hitta boende, köpa hus, billig bostad, hitta hem, köpa hem, mäklare" />
+<meta name="description" content="ProjektBostad är en webbsida som publicerar bostäder över hela landet till ett billigt pris" />
+<meta name="og:url" content="https://localhost:7287/Hemnet/KopSida/@Html.DisplayFor(model=> model.Anlagg_Id)" />
+<meta title="ProjektBostad" />
+<meta property="og:title" content="@Html.DisplayFor(model=> model.Bostadsnamn)" />
+<meta property="og:type" content="@Html.DisplayFor(model=> model.Typ_Id)" />
+<meta property="og:image" content="@Html.DisplayFor(model=> model.Bild)" />
+
+@{
+    ViewData["Title"] = "KopSida";
+}
+
+
+<style>
+    body {
+        background-color: darkslateblue;
+       
+    }
+    .property-details {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        text-align: center;
+    }
+
+        .property-details h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .property-details h4 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .property-details hr {
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+
+        .property-details dl {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            
+        }
+
+        .property-details dt, .property-details dd {
+            width: 48%;
+            margin-bottom: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+        }
+
+        .property-details dt {
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .img{
+            background-image: url('@Model.Bild');
+            background-size: 400px;    
+        
+        }
+
+        .property-details dd {
+            font-size: 18px;
+        }
+
+    .button {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 5px;
+        cursor: pointer;
+        color: #fff;
+        background-color: #007bff;
+        border: none;
+        transition: background-color 0.3s;
+    }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+
+    .button1{
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 5px;
+        cursor: pointer;
+        color: #fff;
+        background-color: lightblue;
+        border: none;
+        transition: background-color 0.3s;
+    }
+
+</style>
+
+
+
+<div class="btn">
+    <a asp-action="BostadControll" class="button1">Tillbaka</a>
+</div>
+<div class="property-details">
+    <h1>@Model.Bostadsnamn</h1>
+    @ViewBag.error
+    
+
+   
+    <dl class="row">
+        
+        <dt class="col-sm-2">@Html.DisplayNameFor(model => model.Kostnad)</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.Kostnad)</dd>
+
+        <dt class="col-sm-2">@Html.DisplayNameFor(model => model.Kvm)</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.Kvm)</dd>
+
+        <dt class="col-sm-2">@Html.DisplayNameFor(model => model.Adress)</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.Adress)</dd>
+
+        <dt class="col-sm-2">@Html.DisplayNameFor(model => model.Bostadsnamn)</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.Bostadsnamn)</dd>
+
+        <dt class="col-sm-2">@Html.DisplayNameFor(model => model.Postkod)</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.Postkod)</dd>
+
+        <dt class="col-sm-2">@Html.DisplayNameFor(model => model.Stad)</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.Stad)</dd>
+        
+    </dl>
+
+    <div class="img">
+        <img src="@Model.Bild" alt="@Model.Bostadsnamn" style="max-width: 100%; height: auto;">
+    </div>
+    <div class="btn">
+        <a asp-action="KopFormular" class="button">Köp Bostad</a>
+    </div>
+
+ 
+
+   
+

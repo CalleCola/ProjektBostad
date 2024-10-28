@@ -1,0 +1,85 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ProjektBostad
+build_property.RootNamespace = ProjektBostad
+build_property.ProjectDir = C:\Users\Lenovo\source\repos\ProjektBostad\ProjektBostad\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Lenovo\source\repos\ProjektBostad\ProjektBostad
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Lenovo/source/repos/ProjektBostad/ProjektBostad/Views/Hemnet/BostadControll.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGVtbmV0XEJvc3RhZENvbnRyb2xsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lenovo/source/repos/ProjektBostad/ProjektBostad/Views/Hemnet/Confirmation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGVtbmV0XENvbmZpcm1hdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lenovo/source/repos/ProjektBostad/ProjektBostad/Views/Hemnet/KontoResultat.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGVtbmV0XEtvbnRvUmVzdWx0YXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lenovo/source/repos/ProjektBostad/ProjektBostad/Views/Hemnet/KopFormular.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGVtbmV0XEtvcEZvcm11bGFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lenovo/source/repos/ProjektBostad/ProjektBostad/Views/Hemnet/KopSida.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGVtbmV0XEtvcFNpZGEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lenovo/source/repos/ProjektBostad/ProjektBostad/Views/Hemnet/LogIn.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGVtbmV0XExvZ0luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lenovo/source/repos/ProjektBostad/ProjektBostad/Views/Hemnet/RaderaResultat.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGVtbmV0XFJhZGVyYVJlc3VsdGF0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lenovo/source/repos/ProjektBostad/ProjektBostad/Views/Hemnet/SkapaAnvandare.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGVtbmV0XFNrYXBhQW52YW5kYXJlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lenovo/source/repos/ProjektBostad/ProjektBostad/Views/Hemnet/TaBortAnvandare.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGVtbmV0XFRhQm9ydEFudmFuZGFyZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lenovo/source/repos/ProjektBostad/ProjektBostad/Views/Hemnet/UppdateraResultat.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGVtbmV0XFVwcGRhdGVyYVJlc3VsdGF0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lenovo/source/repos/ProjektBostad/ProjektBostad/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lenovo/source/repos/ProjektBostad/ProjektBostad/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lenovo/source/repos/ProjektBostad/ProjektBostad/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lenovo/source/repos/ProjektBostad/ProjektBostad/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lenovo/source/repos/ProjektBostad/ProjektBostad/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lenovo/source/repos/ProjektBostad/ProjektBostad/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lenovo/source/repos/ProjektBostad/ProjektBostad/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-jwelc5c1qw
